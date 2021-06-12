@@ -9,8 +9,8 @@ function getInputParams(question, availableValues) {
 
 function validateInput(userInput, availableValues) {
     if (userInput && availableValues === "number") {
-        return /^[0-9]{1,}$/.test(userInput);
-    } else if (userInput && typeof availableValues === "object") {
+        return /^-{0,1}[0-9]{1,}$/.test(userInput);
+    } else if (userInput && Array.isArray(availableValues)) {
         return availableValues.includes(userInput.toLowerCase());
     }
     return false;
@@ -48,8 +48,8 @@ function obtainResult(firstNumber, secondNumber, operation) {
     return result;
 }
 
-let availableOperations = ["+", "add", "-", "sub", "*", "mult", "/", "div", "%", "mod"];
-let numberType = "number";
+const availableOperations = ["+", "add", "-", "sub", "*", "mult", "/", "div", "%", "mod"];
+const numberType = "number";
 let firstNumber = getInputParams("Введите первое число:", numberType);
 let secondNumber = getInputParams("Введите второе число:", numberType);
 let operation = getInputParams("Введите операцию:\r\nСписок операций: + и add, - и sub, * и mult, / и div, % и mod", availableOperations);
