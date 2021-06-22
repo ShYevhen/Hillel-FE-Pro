@@ -1,9 +1,9 @@
 function validateRadius(userInput, errorMsg) {
     if (userInput && +userInput > 0) {
-        return false;
+        return true;
     }
     alert(errorMsg);
-    return true;
+    return false;
 }
 
 function validateOperation(userInput, errorMsg) {
@@ -11,11 +11,11 @@ function validateOperation(userInput, errorMsg) {
         case "1":
         case "2":
         case "3": {
-            return false;
+            return true;
         }
         default: {
             alert(errorMsg);
-            return true;
+            return false;
         }
     }
 }
@@ -26,7 +26,7 @@ function obtainRadius() {
     let radius;
     do {
         radius = prompt(message);
-    } while (validateRadius(radius, errorMsg));
+    } while (!validateRadius(radius, errorMsg));
     return +radius;
 }
 
@@ -34,7 +34,7 @@ function obtainOperation() {
     const message = "Введите номер команды чтобы посчитать: 1 - диаметр, 2 - площадь круга, 3 - длинну окружности";
     const errorMsg = "Нет такой команды";
     let operation;
-    while (operation === undefined || validateOperation(operation, errorMsg)) {
+    while (operation === undefined || !validateOperation(operation, errorMsg)) {
         operation = prompt(message);
     }
     return operation;
