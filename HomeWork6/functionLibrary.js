@@ -72,3 +72,16 @@ function sortTheList(products, fieldName, cheapFirst) {
         }
     }
 }
+
+function customReverse(itemsList) {
+    if (!itemsList || itemsList.length === 0) {
+        return;
+    }
+
+    for (let i = 0; i < itemsList.length / 2 - (itemsList.length % 2); i++) {
+        let temp = itemsList[i];
+        itemsList[i] = itemsList[itemsList.length - 1 - i];
+        itemsList[itemsList.length - 1 - i] = temp;
+    }
+    return itemsList;
+}
