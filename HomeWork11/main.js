@@ -10,7 +10,6 @@ function addTaskHandler(event) {
 }
 
 function clickOnTaskHandler(event) {
-    event.stopPropagation();
     event.currentTarget.classList.toggle("done");
 }
 
@@ -30,7 +29,7 @@ function obtainInputValue() {
 }
 
 function isValidTask(task) {
-    return /\w+/.test(task);
+    return /[\wа-яА-я]+/.test(task);
 }
 
 function addTaskNodes(task) {
