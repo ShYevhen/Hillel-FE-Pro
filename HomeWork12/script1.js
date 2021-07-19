@@ -78,7 +78,7 @@ function removeSecondRow() {
 function sumTotal() {
     const nodesList = document.querySelectorAll("[data-id]");
     const sumRevenue = sumNumbersFromNodes(Array.from(nodesList));
-    document.getElementById("summ").textContent = convertToMillion(sumRevenue);
+    document.getElementById("summ").textContent = "TOTAL: " + convertToMillion(sumRevenue);
 }
 
 function convertToNumber(textNumber) {
