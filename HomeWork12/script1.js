@@ -3,13 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
     titleNode.style.fontSize = "24px";
 });
 
-document.addEventListener("click", (event) => {
-    console.log('bubble', event.target);
-});
-document.addEventListener("click", (event) => {
-    console.log('pogr', event.target);
-}, true);
-
 window.onload = () => {
     document.getElementById("removeAttrBtn").addEventListener("click", removeMyAttribute, { once: true });
     document.getElementById("setGreenBtn").addEventListener("click", addGreenBackground, true);
