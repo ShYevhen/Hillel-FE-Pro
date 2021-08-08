@@ -1,0 +1,57 @@
+.main-conteiner {
+    padding: 95px 10px 10px;
+    max-height: 660px;
+    height: 80vh;
+    overflow: hidden;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    background: url(./images/bgHW11.jpg) no-repeat;
+    background-size: cover;
+    background-position-y: -130px;
+    border-radius: 25px;
+}
+.btn-login {
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    margin: 0 20px;
+    background: linear-gradient(-135deg, #00e5fe, #4463fe);
+    box-shadow: 0 15px 65px #4753ff;
+    border-width: 0;
+    border-radius: 50px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 14px;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+input {
+    box-sizing: border-box;
+    height: 40px;
+    padding: 1em;
+    border: 1px solid #00e5fe;
+    border-radius: 1.5em;
+    background: #fff;
+    resize: none;
+    outline: none;
+}
+input:focus {
+    border-color: #4463fe;
+}
+.hide {
+    display: none;
+}
+.err-msg {
+    color: #c3100e;
+    font-weight: 700;
+    text-align: left;
+    margin-left: 105px;
+    margin-top: 3px;
+}
+.welcome-user {
+    font-size: 28px;
+    color: #2201d6;
+    font-weight: 700;
+}
