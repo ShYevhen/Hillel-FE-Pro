@@ -24,11 +24,7 @@ class Hamburger {
         }
     }
     countTotal(type) {
-        let total = this.size[type];
-        this.topping.forEach((element) => {
-            total += element[type];
-        });
-        return total;
+        return this.topping.reduce((sum, item) => sum + item[type], this.size[type]);;
     }
     getPrice() {
         return this.countTotal("price");
