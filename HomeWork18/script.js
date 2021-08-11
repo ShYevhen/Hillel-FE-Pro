@@ -1,4 +1,5 @@
 window.onload = initPageConfig;
+const LOGIN_KEY = "userName"
 
 function initPageConfig() {
     const useCookie = confirm("Enable cookie?");
@@ -16,12 +17,12 @@ function obtainUserName(useCookie) {
     if (useCookie) {
         return obtainUserNameFromCookie();
     }
-    return localStorage.getItem("userName");
+    return localStorage.getItem(LOGIN_KEY);
 }
 
 function obtainUserNameFromCookie() {
-    if (document.cookie.includes(encodeURIComponent("userName"))) {
-        const startIndex = document.cookie.indexOf(encodeURIComponent("userName")) + encodeURIComponent("userName").length + 1;
+    if (document.cookie.includes(encodeURIComponent(LOGIN_KEY))) {
+        const startIndex = document.cookie.indexOf(encodeURIComponent(LOGIN_KEY)) + encodeURIComponent(LOGIN_KEY).length + 1;
         const lastIndex = document.cookie.indexOf("; ", startIndex);
         return decodeURIComponent(document.cookie.substring(startIndex, lastIndex !== -1 ? lastIndex : document.cookie.length));
     }
@@ -50,8 +51,8 @@ function showWelcome(userName) {
 
 function saveUserName(userName, useCookie) {
     if (useCookie) {
-        document.cookie = `${encodeURIComponent("userName")}=${encodeURIComponent(userName)}`;
+        document.cookie = `${encodeURIComponent(LOGIN_KEY)}=${encodeURIComponent(userName)}`;
     } else {
-        localStorage.setItem("userName", userName);
+        localStorage.setItem(LOGIN_KEY, userName);
     }
 }
