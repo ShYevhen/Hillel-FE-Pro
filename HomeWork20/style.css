@@ -1,0 +1,113 @@
+body {
+    background-color: #d7edff;
+}
+.main-div {
+    text-align: center;
+}
+.del-button {
+    color: red;
+}
+.del-button:hover {
+    cursor: pointer;
+}
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 700px;
+}
+.product-table {
+    border: 2px solid #083c9a;
+}
+.product-table thead,
+.product-table tfoot {
+    background: #083c9a;
+    color: white;
+}
+th {
+    text-align: center;
+    padding: 5px 0;
+}
+td[data-title="Product"] {
+    padding-left: 15px;
+    text-align: left;
+}
+td[data-title="Quantity"] {
+    text-align: center;
+}
+td[data-title="Price"],
+td[data-title="Sum"] {
+    padding-right: 15px;
+    text-align: right;
+}
+th.product {
+    width: 40%;
+}
+th.quantity {
+    width: 20%;
+}
+th.price, th.sum {
+    width: 20%;
+}
+th.actions {
+    width: 20px;
+}
+tbody tr:nth-child(even) {
+    background: #c6ffff;
+}
+tbody tr:nth-child(odd) {
+    background: #badfff;
+}
+tbody tr:hover {
+    background: #247cff;
+    color: #ffffff;
+}
+tfoot th {
+    padding-right: 35px;
+    text-align: right;
+}
+form {
+    padding: 10px 0 20px;
+    position: relative;
+}
+.product-input,
+.price-input,
+.quantity-input {
+    border-radius: 10px;
+    padding: 5px;
+    border: 2px solid #083c9a;
+    background: #c6ffff;
+    outline: none;
+}
+.product-input:focus,
+.price-input:focus,
+.quantity-input:focus {
+    border-radius: 10px;
+    padding: 5px;
+    border: 2px solid #247cff;
+    background: #c6ffff;
+}
+.add-prod-btn {
+    border-radius: 10px;
+    padding: 5px 10px;
+    border: 2px solid #083c9a;
+    background: #083c9a;
+    color: #ffffff;
+    cursor: pointer;
+}
+.add-prod-btn:hover {
+    border: 2px solid #247cff;
+    background: #247cff;
+}
+.add-prod-btn:active {
+    border: 2px solid #247cff;
+    background: #083c9a;
+}
+.hidden {
+    display: none;
+}
+.error-msg {
+    color: red;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}

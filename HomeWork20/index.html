@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="script.js" async></script>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="main-div">
+            <form>
+                <input class="product-input" placeholder="Enter a produt name" type="text" onfocus="hideError()" />
+                <input class="price-input" placeholder="Enter a product price" type="number" step="0.01" min="0.01" onfocus="hideError()" />
+                <input class="quantity-input" placeholder="Enter a product quantity" type="number" step="1" min="1" onfocus="hideError()" />
+                <button class="add-prod-btn" onclick="addProduct(event)">Add product</button>
+                <div class="error-msg hidden"></div>
+            </form>
+            <table class="product-table hidden" onclick="delProduct(event)">
+                <thead>
+                    <tr>
+                        <th class="product">Product</th>
+                        <th class="price">Price</th>
+                        <th class="quantity">Quantity</th>
+                        <th class="sum">Sum</th>
+                        <th class="actions"></th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th colspan="5" class="total-price">Total: 0 $</th>
+                    </tr>
+                </tfoot>
+                <tbody></tbody>
+            </table>
+        </div>
+    </body>
+
+    <template id="row-template">
+        <tr>
+            <td data-title="Product"></td>
+            <td data-title="Price"></td>
+            <td data-title="Quantity"></td>
+            <td data-title="Sum"></td>
+            <td class="delete">
+                <span class="del-button">&cross;</span>
+            </td>
+        </tr>
+    </template>
+</html>
