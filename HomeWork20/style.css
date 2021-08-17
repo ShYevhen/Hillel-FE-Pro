@@ -40,13 +40,16 @@ td[data-title="Sum"] {
     text-align: right;
 }
 th.product {
-    width: 40%;
+    width: 30%;
 }
 th.quantity {
     width: 20%;
 }
-th.price, th.sum {
-    width: 20%;
+th.price {
+    width: 25%;
+}
+th.sum {
+    width: calc(25% - 20px);
 }
 th.actions {
     width: 20px;
