@@ -6,20 +6,27 @@ function addProduct(event) {
     const productValue = productInput.value.trim();
     const priceValue = Number.parseFloat(priceInput.value);
     const quantityValue = Number.parseInt(quantityInput.value);
-    if (productValue.length < 3) {
-        showError("Wrong input for product name");
-        return;
-    } else if (Object.is(priceValue, NaN) || !/^\d+(\.\d{1,2})?$/.test(priceValue)) {
-        showError("Wrong input for product price");
-        return;
-    } else if (Object.is(quantityValue, NaN) || quantityValue < 1) {
-        showError("Wrong input for product quantity");
+    if (!isValidInputs(productValue, priceValue, quantityValue)) {
         return;
     }
     productInput.value = "";
     priceInput.value = "";
     quantityInput.value = "";
     addNewProduct(productValue, priceValue, quantityValue);
+}
+
+function isValidInputs(productValue, priceValue, quantityValue) {
+    if (productValue.length < 3) {
+        showError("Wrong input for product name");
+        return false;
+    } else if (Object.is(priceValue, NaN) || !/^\d+(\.\d{1,2})?$/.test(priceValue)) {
+        showError("Wrong input for product price");
+        return false;
+    } else if (Object.is(quantityValue, NaN) || quantityValue < 1) {
+        showError("Wrong input for product quantity");
+        return false;
+    }
+    return true;
 }
 
 function addNewProduct(productValue, priceValue, quantityValue) {
