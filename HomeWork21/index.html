@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="main.js" async></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="todo-list">
+            <h2>Todo List</h2>
+            <form>
+                <button class="btn load" onclick="fetchTasks(event)">Load ToDos</button>
+            </form>
+            <ul class="task-list" onclick="handleClick(event)"></ul>
+            <div class="detail hidden">
+                <p><span>Title: </span><span class="title"></span></p>
+                <p><span>User: </span><span class="username"></span></p>
+                <p>
+                    <span>Complited: </span
+                    ><label class="switch">
+                        <input type="checkbox" />
+                        <span class="slider round"></span>
+                    </label>
+                </p>
+                <span class="btn-back" onclick="handleCloseDetail()">&#10158;</span>
+            </div>
+        </div>
+        <template id="li-template">
+            <li class="{{classes}}" data-id="{{todoId}}">
+                <span title="{{title}}">{{title}}</span><button class="btn remove" title="Delete"></button>
+            </li>
+        </template>
+    </body>
+</html>
