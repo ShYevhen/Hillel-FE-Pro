@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    background: #ffb09d;
+    font-size: 100%;
+    color: #ffb09d;
+}
+.frame {
+    width: 30%;
+    height: 25%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 25%;
+    min-width: 320px;
+    max-width: 650px;
+}
+
+.header {
+    width: 100%;
+    min-height: 45px;
+    background: #782a17;
+    position: relative;
+    top: 0;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    display: inline-block;
+}
+.header h1 {
+    margin-bottom: 15px;
+}
+
+dt {
+    background: #aa4f39;
+}
+dt,
+dd {
+    padding-left: 20px;
+}
+dd {
+    background: #dc7f69;
+    color: #461003;
+}
+dt:after {
+    content: ":";
+}
+
+.mainContainer {
+    width: 100%;
+    min-height: 200px;
+    height: 100%;
+    background: #dc7f69;
+}
+
+#details {
+    width: 35%;
+    height: 100%;
+    float: left;
+    background: #dc7f69;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.mainRight {
+    background: #dc7f69;
+    width: 65%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+.footer {
+    width: 100%;
+    min-height: 25%;
+    background: #782a17;
+    position: relative;
+    bottom: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.temBut {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 10px;
+    background: transparent;
+}
+
+#celsius {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background: #aa4f39;
+}
+#fahrenheit {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background: #aa4f39;
+}
+
+sup {
+    font-size: 75%;
+    display: inline-block;
+    background: transparent;
+}
+#temp sup {
+    color: #461003;
+}
+img,
+a {
+    background: transparent;
+}
+#picContent {
+    display: inline-block;
+    background: transparent;
+}
+#temp {
+    display: inline-block;
+    margin: auto;
+}
+h1#temp {
+    padding-right: 40px;
+    font-size: 225%;
+    top: -50px;
+}
+#weather {
+    color: #461003;
+    background: transparent;
+    margin: 20px 20px 0;
+    font-size: 2em;
+    display: block;
+}
+.clearFix {
+    clear: both;
+}
+.todayIcon {
+    background: transparent;
+    display: inline-block;
+}
+.mainRight h1 {
+    font-size: 3em;
+    position: relative;
+    left: 5%;
+    bottom: -15%;
+    margin-top: auto;
+    background: transparent;
+    color: #461003;
+}
+.footer h5 {
+    padding: 5px 0 5px 15px;
+    display: inline-block;
+    background: transparent;
+    margin-bottom: 5px;
+}
+#humidity:after,
+#cloudines:after {
+    content: " %";
+}
+#wind:after {
+    content: " m/sec.";
+}
+#pressure:after {
+    content: " hPa";
+}
+img {
+    margin: 10px;
+}
+.header input {
+    margin: 10px;
+    color: #461003;
+    border-radius: 5px;
+    border-color: #aa4f39;
+}
+.header button {
+    color: #461003;
+    font-size: 11px;
+    padding: 3px;
+    border-radius: 5px;
+    border-color: #aa4f39;
+}
+.hidden {
+    display: none;
+}
