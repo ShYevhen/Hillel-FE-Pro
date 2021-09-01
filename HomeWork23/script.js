@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", createCalculator);
 
 function createCalculator() {
-    new Calculator();
+    const calc = new Calculator();
 }
 
 class Calculator {
