@@ -48,7 +48,7 @@ function isInvalidCombination(combinationArr) {
         }
         return accumulator;
     }, 0);
-    return sum % 2 === 1? true : false;
+    return sum % 2 === 1 ? true : false;
 }
 
 function createTileEl(text) {
@@ -89,7 +89,7 @@ function isDone() {
     let isDone = true;
     for (let i = 0; i < titlesArr.length - 1; i++) {
         let val = titlesArr[i].textContent;
-        if(+val !== i+1) {
+        if (+val !== i + 1) {
             isDone = false;
             break;
         }
