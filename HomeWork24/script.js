@@ -29,7 +29,7 @@ function getRandomIndex() {
             availableIdx.push(tmpIdx[randomIndex]);
             tmpIdx.splice(randomIndex, 1);
         }
-        invalidCombination = !!validateCombination(availableIdx);
+        invalidCombination = isInvalidCombination(availableIdx);
     }
     availableIdx.reverse();
     return function () {
@@ -37,7 +37,7 @@ function getRandomIndex() {
     };
 }
 
-function validateCombination(combinationArr) {
+function isInvalidCombination(combinationArr) {
     let sum = combinationArr.reduce((accumulator, currentValue, index, combArr) => {
         if (index < combArr.length - 1) {
             for (let i = index + 1; i < combArr.length; i++) {
@@ -48,7 +48,7 @@ function validateCombination(combinationArr) {
         }
         return accumulator;
     }, 0);
-    return sum % 2;
+    return sum % 2 === 1? true : false;
 }
 
 function createTileEl(text) {
@@ -82,19 +82,19 @@ function renderTiles() {
 }
 
 function isDone() {
-    if (+TILES[TILES.length - 1][TILES[TILES.length - 1].length - 1].textContent !== 0) {
+    const titlesArr = TILES.flat();
+    if (+titlesArr[titlesArr.length - 1].textContent !== 0) {
         return false;
     }
-    for (let i = 0; i < 4; i++) {
-        for (let j = 0; j < 3; j++) {
-            let currentValue = +TILES[i][j].textContent;
-            let nextValue = +TILES[i][j + 1].textContent;
-            if (nextValue !== 0 && currentValue + 1 !== nextValue) {
-                return false;
-            }
+    let isDone = true;
+    for (let i = 0; i < titlesArr.length - 1; i++) {
+        let val = titlesArr[i].textContent;
+        if(+val !== i+1) {
+            isDone = false;
+            break;
         }
     }
-    return true;
+    return isDone;
 }
 
 function onTileClick(e) {
