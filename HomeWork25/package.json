@@ -1,0 +1,14 @@
+{
+  "name": "my-first-node-project",
+  "version": "1.0.0",
+  "description": "my-first-node-project",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Yevhen",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.29.1"
+  }
+}
