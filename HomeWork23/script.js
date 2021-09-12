@@ -31,12 +31,12 @@ class Calculator {
         /* The click events */
 
         // Add click event to numbers
-        for (var i = 0, l = this.nums.length; i < l; i++) {
+        for (let i = 0, l = this.nums.length; i < l; i++) {
             this.nums[i].onclick = this.setNum.bind(this);
         }
 
         // Add click event to operators
-        for (var i = 0, l = this.ops.length; i < l; i++) {
+        for (let i = 0, l = this.ops.length; i < l; i++) {
             this.ops[i].onclick = this.moveNum.bind(this);
         }
 
