@@ -113,9 +113,7 @@ function swapTiles(id) {
 
     // are they neibors
     if ((tileX === emptyX && Math.abs(tileY - emptyY) === 1) || (tileY === emptyY && Math.abs(tileX - emptyX) === 1)) {
-        const temp = TILES[tileX][tileY];
-        TILES[tileX][tileY] = TILES[emptyX][emptyY];
-        TILES[emptyX][emptyY] = temp;
+        [TILES[tileX][tileY], TILES[emptyX][emptyY]] = [TILES[emptyX][emptyY], TILES[tileX][tileY]];
         countSteps();
     }
 }
