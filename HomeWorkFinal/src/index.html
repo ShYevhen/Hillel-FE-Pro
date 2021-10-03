@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Chat</title>
+    </head>
+    <body>
+        <div class="login hidden">
+            <div class="main">
+                <p class="sign" align="center">Login</p>
+                <form class="form1">
+                    <input class="un" type="text" align="center" placeholder="Username" />
+                    <a class="submit" align="center">Login</a>
+                    <p align="center" class="error-login hidden">Bad input for Username</p>
+                </form>
+            </div>
+        </div>
+        <div class="container hidden">
+            <div class="content">
+                <div class="row row-broken">
+                    <div class="col-inside-lg decor-default chat" tabindex="5000">
+                        <div class="un-disp">Current: <span></span><button>Logout</button></div>
+                        <div class="chat-users">
+                            <h6>Members</h6>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="chat col-inside-lg decor-default messages" style="overflow-y: auto;">
+                        <div class="chat-body">
+                            <h6>Chat</h6>
+                            <div></div>
+                        </div>
+                        <div class="answer-add">
+                            <input type="text" placeholder="Write a message" class="msg-input" />
+                            <button class="answer-btn answer-btn-1" disabled="true">Send</button><br/>
+                            Reconnect<input type="checkbox" class="reconnection"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <template id="user-template">
+        <div class="user">
+            <div class="avatar">
+                <img src="" alt="" />
+            </div>
+            <div class="name"></div>
+        </div>
+    </template>
+    <template id="message-template">
+        <div class="answer">
+            <div class="avatar">
+                <img src="" alt="" />
+            </div>
+            <div class="name"></div>
+            <div class="text"></div>
+            <div class="time"></div>
+        </div>
+    </template>
+</html>
