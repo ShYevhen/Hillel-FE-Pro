@@ -37,6 +37,10 @@ export class ChatSocket {
         this.socket.send(message);
     }
 
+    close() {
+        this.socket.close();
+    }
+
     setReconnect(isReconnect) {
         this.#isReconnect = isReconnect;
         if (!this.isOnline && this.#isReconnect) {

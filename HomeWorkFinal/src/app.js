@@ -93,6 +93,7 @@ function handleLogout() {
         storage.clearUserHistory(USER_NAME);
     }
     storage.clearUser();
+    chat.close();
     location.reload();
 }
 
@@ -127,5 +128,5 @@ function sendMessage() {
         return;
     }
     const msg = new Message(USER_NAME, value);
-    chat.socket.send(msg.toStringForSend());
+    chat.send(msg.toStringForSend());
 }
